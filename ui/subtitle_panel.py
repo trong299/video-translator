@@ -14,6 +14,11 @@ from PyQt6.QtGui import QColor, QTextCharFormat, QTextCursor
 ResizeToContents = QHeaderView.ResizeMode.ResizeToContents
 ResizeMode_Stretch = QHeaderView.ResizeMode.Stretch
 
+# PyQt6 compatibility - TableWidget enums
+SelectionBehavior_SelectRows = QTableWidget.SelectionBehavior.SelectRows
+SelectionMode_SingleSelection = QTableWidget.SelectionMode.SingleSelection
+NoEditTriggers = QTableWidget.EditTrigger.NoEditTriggers
+
 from typing import List, Optional, TYPE_CHECKING
 
 from utils.logger import get_logger
@@ -98,9 +103,9 @@ class SubtitleTable(QTableWidget):
         header.setSectionResizeMode(2, ResizeMode_Stretch)
         header.setSectionResizeMode(3, ResizeMode_Stretch)
         
-        self.setSelectionBehavior(QTableWidget.SelectRows)
-        self.setSelectionMode(QTableWidget.SingleSelection)
-        self.setEditTriggers(QTableWidget.NoEditTriggers)
+        self.setSelectionBehavior(SelectionBehavior_SelectRows)
+        self.setSelectionMode(SelectionMode_SingleSelection)
+        self.setEditTriggers(NoEditTriggers)
         
         # Connect signals
         self.itemSelectionChanged.connect(self._on_selection_changed)
