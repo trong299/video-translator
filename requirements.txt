@@ -1,0 +1,29 @@
+# GUI Framework
+PyQt6>=6.6.0
+
+# Video Processing
+opencv-python>=4.8.0
+opencv-python-headless>=4.8.0
+Pillow>=10.0.0
+
+# OCR
+paddleocr>=2.7.0
+paddlepaddle>=2.5.0
+
+# Numerical Computing
+numpy>=1.24.0
+
+# Fuzzy String Matching
+rapidfuzz>=3.0.0
+
+# Translation (Offline capable)
+# Using transformers for local translation
+transformers>=4.35.0
+torch>=2.0.0
+sentencepiece>=0.1.99
+
+# Logging
+loguru>=0.7.0
+
+# Utils
+pathlib>=1.0.0
