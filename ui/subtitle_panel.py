@@ -10,6 +10,10 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QColor, QTextCharFormat, QTextCursor
 
+# PyQt6 compatibility - ResizeMode enum
+ResizeToContents = QHeaderView.ResizeMode.ResizeToContents
+ResizeMode_Stretch = QHeaderView.ResizeMode.Stretch
+
 from typing import List, Optional, TYPE_CHECKING
 
 from utils.logger import get_logger
@@ -89,10 +93,10 @@ class SubtitleTable(QTableWidget):
         
         # Stretch columns
         header = self.horizontalHeader()
-        header.setSectionResizeMode(0, QHeaderView.ResizeToContents)
-        header.setSectionResizeMode(1, QHeaderView.ResizeToContents)
-        header.setSectionResizeMode(2, QHeaderView.Stretch)
-        header.setSectionResizeMode(3, QHeaderView.Stretch)
+        header.setSectionResizeMode(0, ResizeToContents)
+        header.setSectionResizeMode(1, ResizeToContents)
+        header.setSectionResizeMode(2, ResizeMode_Stretch)
+        header.setSectionResizeMode(3, ResizeMode_Stretch)
         
         self.setSelectionBehavior(QTableWidget.SelectRows)
         self.setSelectionMode(QTableWidget.SingleSelection)
