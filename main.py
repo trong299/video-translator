@@ -142,9 +142,7 @@ def main():
     app.setApplicationName("Video Translator")
     app.setOrganizationName("VideoTranslator")
     
-    # Enable high DPI
-    app.setAttribute(Qt.AA_EnableHighDpiScaling, True)
-    app.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
+    # Enable high DPI (PyQt6 handles this automatically, no need to set attributes)
     
     # Create main window
     window = MainWindow()
