@@ -405,7 +405,7 @@ class VideoPlayer(QWidget):
     def enable_roi_mode(self, enabled: bool):
         """Enable/disable ROI selection mode"""
         self.is_roi_mode = enabled
-        self.roi_overlay.setAttribute(Qt.WA_TransparentForMouseEvents, not enabled)
+        self.roi_overlay.setAttribute(Qt.WidgetAttribute.WA_TransparentForMouseEvents, not enabled)
     
     def _on_playback_tick(self):
         """Playback timer tick"""

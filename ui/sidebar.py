@@ -51,7 +51,7 @@ class Sidebar(QWidget):
         # Title
         title = QLabel("Video Translator")
         title.setObjectName("title")
-        title.setAlignment(Qt.AlignCenter)
+        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(title)
         
         # Video selection group
